@@ -4,89 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>US Number Validator</title>
-  <style>
-    body {
-      font-style: italic;
-      color: purple;
-      background-color: black;
-      margin: 0;
-      padding: 0;
-    }
-
-    h1 {
-      font-style: italic;
-      color: white;
-      text-align: center;
-      padding: 50px 0;
-      margin: 0;
-    }
-
-    .container {
-      text-align: center;
-      margin: 50px auto;
-    }
-
-    #user-input {
-      padding: 10px;
-      font-size: 16px;
-      width: 300px;
-      border: none;
-      border-radius: 5px;
-      margin-right: 10px;
-      font-style: italic;
-    }
-
-    #check-btn,
-    #clear-btn {
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: purple;
-      color: white;
-      transition: background-color 0.3s ease;
-      font-style: italic;
-    }
-
-    #check-btn:hover,
-    #clear-btn:hover {
-      background-color: white;
-      color: black;
-    }
-
-    #results-div {
-      margin-top: 20px;
-      font-size: 18px;
-      text-align: center;
-      font-style: italic;
-      color: purple;
-    }
-
-    .footer {
-      font-size: 12px;
-      text-align: center;
-      margin-top: 50px;
-      font-style: italic;
-      color: white;
-    }
-
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    @media only screen and (max-width: 768px) {
-      #user-input {
-        width: 200px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>US Number Validator</h1>
@@ -103,29 +21,6 @@
     <!-- Add your beautiful background image or animation here -->
   </div>
 
-  <script>
-    document.getElementById('check-btn').addEventListener('click', function() {
-      var userInput = document.getElementById('user-input').value;
-      var resultsDiv = document.getElementById('results-div');
-
-      if (userInput === '') {
-        alert('Please provide a phone number');
-        return;
-      }
-
-      var regex = /^(1\s?)?(\(\d{3}\)|\d{3})[-\s]?\d{3}[-\s]?\d{4}$/;
-
-      if (regex.test(userInput)) {
-        resultsDiv.innerText = 'Valid US number: ' + userInput;
-      } else {
-        resultsDiv.innerText = 'Invalid US number: ' + userInput;
-      }
-    });
-
-    document.getElementById('clear-btn').addEventListener('click', function() {
-      var resultsDiv = document.getElementById('results-div');
-      resultsDiv.innerText = '';
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
