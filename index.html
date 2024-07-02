@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>US Number Validator</title>
+  <style>
+    /* Rest of the CSS code */
+
+    /* Rest of the CSS code */
+
+    body {
+      background-color: #4B0082; /* Dark Purple */
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-style: italic; /* Added */
+    }
+
+    h1 {
+      text-align: center;
+      padding: 50px 0;
+      margin: 0;
+      color: white;
+      font-style: italic; /* Added */
+    }
+
+    .container {
+      text-align: center;
+      margin: 50px auto;
+    }
+
+    #user-input {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-style: italic; /* Added */
+    }
+
+    #check-btn,
+    #clear-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+      transition: background-color 0.3s ease;
+      font-style: italic; /* Added */
+    }
+
+    #check-btn:hover,
+    #clear-btn:hover {
+      background-color: white;
+      color: black;
+      font-style: italic; /* Added */
+    }
+
+    #results-div {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+      font-style: italic; /* Added */
+    }
+
+    .footer {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 50px;
+      font-style: italic; /* Added */
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    @media only screen and (max-width: 768px) {
+      #user-input {
+        width: 200px;
+        font-style: italic; /* Added */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>US Number Validator</h1>
+  <div class="container">
+    <input id="user-input" type="text" placeholder="Enter a US number">
+    <button id="check-btn">Check</button>
+    <button id="clear-btn">Clear</button>
+  </div>
+  <div id="results-div"></div>
+  <div class="footer">
+    <p>Designed and developed by Sumita-Balouch</p>
+  </div>
+  <div class="background">
+    <!-- Add your beautiful background image or animation here -->
+  </div>
+
+  <script>
+    document.getElementById('check-btn').addEventListener('click', function() {
+      var userInput = document.getElementById('user-input').value;
+      var resultsDiv = document.getElementById('results-div');
+
+      if (userInput === '') {
+        alert('Please provide a phone number');
+        return;
+      }
+
+      var regex = /^(1\s?)?(\(\d{3}\)|\d{3})[-\s]?\d{3}[-\s]?\d{4}$/;
+
+      if (regex.test(userInput)) {
+        resultsDiv.innerText = 'Valid US number: ' + userInput;
+      } else {
+        resultsDiv.innerText = 'Invalid US number: ' + userInput;
+      }
+    });
+
+    document.getElementById('clear-btn').addEventListener('click', function() {
+      var resultsDiv = document.getElementById('results-div');
+      resultsDiv.innerText = '';
+    });
+  </script>
+</body>
+</html>
