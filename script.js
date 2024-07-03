@@ -1,4 +1,4 @@
-document.getElementById('check-btn').addEventListener ('click', function() {
+document.getElementById('check-btn').addEventListener('click', function() {
   const userInput = document.getElementById('user-input').value;
   const resultsDiv = document.getElementById('results-div');
 
@@ -7,7 +7,7 @@ document.getElementById('check-btn').addEventListener ('click', function() {
     return;
   }
 
-    let regex = /^(1\s?)?(\(\d{3}\)|\d{3})[-\s]?\d{3}[-\s]?\d{4}$/;
+  let regex = /^(1\s?)?(\(\d{3}\)|\d{3})[-\s]?\d{3}[-\s]?\d{4}$/;
 
   if (regex.test(userInput)) {
     resultsDiv.innerText = 'Valid US number: ' + userInput;
