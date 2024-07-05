@@ -6,7 +6,7 @@
 - it is US number validator, that shows if a number is validated in US.
 
 ## Demo 📸
-
+live link of the project:https://s-blh.github.io/telephone-number-validator/
 
 ## Technologies Used 🛠️
 
