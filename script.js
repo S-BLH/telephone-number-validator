@@ -10,9 +10,9 @@ document.getElementById('check-btn').addEventListener('click', () => {
   const regex = /^(1\s?)?(\(\d{3}\)|\d{3})[-\s]?\d{3}[-\s]?\d{4}$/;
 
   if (regex.test(userInput)) {
-    resultsDiv.innerText = Valid US number: ${userInput};
+    resultsDiv.innerText = 'Valid US number: ${userInput}';
   } else {
-    resultsDiv.innerText = Invalid US number: ${userInput};
+    resultsDiv.innerText = 'Invalid US number: ${userInput}';
   }
 });
 
