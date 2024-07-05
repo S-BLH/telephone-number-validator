@@ -7,7 +7,6 @@
 
 ## Demo 📸
 
-![Demo]:![image](Screenshot 2024-07-05 131538.png)
 
 ## Technologies Used 🛠️
 
