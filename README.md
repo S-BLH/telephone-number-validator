@@ -6,7 +6,7 @@
 
 ## Demo 📸
 
-![Demo]![Image](C:\Users\Black Store\Desktop\js 3rd project\telephone-number-validator\Screenshot 2024-07-05 131538.png)
+![Demo]:![image](Screenshot 2024-07-05 131538.png)
 
 ## Technologies Used 🛠️
 
